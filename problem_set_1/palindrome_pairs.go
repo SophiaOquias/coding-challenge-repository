@@ -23,18 +23,26 @@ func isPalindrome(s string) bool {
 	return false
 }
 
-// func palindromePairs(words []string) [][]int {
+func palindromePairs(words []string) [][]int {
+	var pairs [][]int 
 
-// }
+	for i := 0; i < len(words); i++ {
+		for j:= 0; j < len(words); j++ {
+			if i != j {
+				var concatinated = words[i] + words[j]
+				if isPalindrome(concatinated) {
+					var pair = []int{i, j}
+					pairs = append(pairs, pair) 
+				}
+			}
+		}
+	}
+
+	return pairs; 
+}
 
 func main() {
-	// inputWords := []string{"bat", "tab", "cat"}
-	// result := palindromePairs(inputWords)
-	// fmt.Println(result) // Output: [[0 1] [1 0]]
-
-	if isPalindrome("racecar") {
-		fmt.Println("Palindrome!")
-	} else {
-		fmt.Println("Not Palindrome!")
-	}
+	inputWords := []string{"bat", "tab", "cat"}
+	result := palindromePairs(inputWords)
+	fmt.Println(result) // Output: [[0 1] [1 0]]
 }
