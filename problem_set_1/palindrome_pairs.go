@@ -13,9 +13,15 @@ func reverseString(s string) string {
 	return reverse; 
 }
 
-// func isPalindrome(s string) bool {
+func isPalindrome(s string) bool {
+	var reverse = reverseString(s) 
 
-// }
+	if s == reverse {
+		return true
+	}
+
+	return false
+}
 
 // func palindromePairs(words []string) [][]int {
 
@@ -26,7 +32,9 @@ func main() {
 	// result := palindromePairs(inputWords)
 	// fmt.Println(result) // Output: [[0 1] [1 0]]
 
-	reverse := reverseString("hello")
-
-	fmt.Println(reverse)
+	if isPalindrome("racecar") {
+		fmt.Println("Palindrome!")
+	} else {
+		fmt.Println("Not Palindrome!")
+	}
 }
