@@ -8,7 +8,7 @@ The solution starts by iterating over the string of brackets. The bracket is che
 
 ## Instructions to Run the Code
 ### Java Instructions 
-1. `cd` into the `problem_set_1` folder
+1. `cd` into the `problem_set_2` folder
 2. Compile the program by running: 
 ```
 javac ValidParentheses.java
@@ -18,7 +18,7 @@ javac ValidParentheses.java
 java ValidParentheses
 ```
 ### Go Instructions
-1. `cd` into the `problem_set_1` folder 
+1. `cd` into the `problem_set_2` folder 
 2. Run by using: 
 ```
 go run .
